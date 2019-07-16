@@ -9,6 +9,8 @@ import com.umeng.message.MsgConstant;
 import com.umeng.message.PushAgent;
 import org.android.agoo.huawei.HuaWeiRegister;
 import org.android.agoo.mezu.MeizuRegister;
+import org.android.agoo.oppo.OppoRegister;
+import org.android.agoo.vivo.VivoRegister;
 import org.android.agoo.xiaomi.MiPushRegistar;
 
 /**
@@ -111,6 +113,25 @@ public class PushModel {
         }
       });
     }
+  }
+  /**
+   * OPPO Push初始化
+   *
+   * @param application appContext
+   * @param oppoKey     Oppokey
+   * @param oppoSecret  Opposecret
+   */
+  public void initOppoPush(Application application, String oppoKey, String oppoSecret) {
+    OppoRegister.register(application, oppoKey, oppoSecret);
+  }
+
+  /**
+   * vivo Push初始化
+   *
+   * @param application appContext
+   */
+  public void initVivoPush(Application application) {
+    VivoRegister.register(application);
   }
 
   public static void openPush() {
