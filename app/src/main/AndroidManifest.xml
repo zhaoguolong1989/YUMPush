@@ -57,7 +57,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        tools:ignore="GoogleAppIndexingWarning">
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:replace="android:allowBackup">
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -82,11 +83,11 @@
         </receiver>
         <!--友盟push about-->
         <activity
-            android:name=".UmengPushActivity"
-            android:exported="true"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Translucent" />
+        android:name=".UmengPushActivity"
+        android:exported="true"
+        android:launchMode="singleTask"
+        android:screenOrientation="portrait"
+        android:theme="@android:style/Theme.Translucent" />
 
         <meta-data
             android:name="com.vivo.push.api_key"
